@@ -330,6 +330,142 @@ footer p {
   margin: 0.25rem 0;
 }
 
+/* ---- Touchstone 4: Volunteer interest tracker ---- */
+.role-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.role-btn {
+  background-color: var(--teal);
+  color: var(--white);
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.role-btn:hover,
+.role-btn:focus {
+  background-color: var(--teal-dark);
+}
+
+.role-btn.is-saved {
+  background-color: var(--coral-dark);
+}
+
+.role-btn.is-saved:hover,
+.role-btn.is-saved:focus {
+  background-color: var(--coral-darker);
+}
+
+.saved-roles-box {
+  background-color: var(--cream);
+  border: 1px dashed var(--teal);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.saved-roles-box h3 {
+  margin: 0 0 0.4rem 0;
+  color: var(--teal-dark);
+  font-size: 1rem;
+}
+
+.saved-roles-box p {
+  margin: 0;
+}
+
+.saved-roles-box ul {
+  margin: 0.5rem 0 0 0;
+}
+
+/* ---- Touchstone 4: Contact page interest banner ---- */
+.interest-banner {
+  background-color: var(--cream);
+  border-left: 4px solid var(--coral);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.interest-banner h3 {
+  margin: 0 0 0.4rem 0;
+  color: var(--teal-dark);
+  font-size: 1rem;
+}
+
+.interest-banner p {
+  margin: 0;
+}
+
+.interest-banner button {
+  margin-top: 0.75rem;
+  background-color: var(--teal);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.interest-banner button:hover,
+.interest-banner button:focus {
+  background-color: var(--teal-dark);
+}
+
+/* ---- Touchstone 4: Form validation feedback ---- */
+.error-message {
+  display: block;
+  min-height: 1.1em;
+  color: var(--coral-darker);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}
+
+.field-invalid {
+  border-color: var(--coral-darker) !important;
+  outline: 2px solid var(--coral-darker);
+}
+
+#form-status {
+  margin: 0;
+  font-weight: 600;
+}
+
+#form-status:empty {
+  display: none;
+}
+
+#form-status.success {
+  background-color: #e5f3ef;
+  color: var(--teal-dark);
+  border: 1px solid var(--teal);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+
+#form-status.error {
+  background-color: #fdeceb;
+  color: var(--coral-darker);
+  border: 1px solid var(--coral-dark);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+
 /* ---- Responsive layout ---- */
 @media (min-width: 800px) {
   header {
