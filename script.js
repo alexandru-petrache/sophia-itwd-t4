@@ -57,7 +57,7 @@ function renderRoleButtons() {
     if (!button) return;
 
     const isSaved = savedIds.indexOf(role.id) !== -1;
-    button.textContent = isSaved ? "Saved \u2713" : "Save this role";
+    button.textContent = isSaved ? "Saved" : "Save this role";
     button.classList.toggle("is-saved", isSaved);
     button.setAttribute("aria-pressed", isSaved ? "true" : "false");
   });

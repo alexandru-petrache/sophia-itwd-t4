@@ -331,20 +331,38 @@ footer p {
 }
 
 /* ---- Touchstone 4: Volunteer interest tracker ---- */
-.role-item {
+#volunteer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#volunteer-list li.role-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--cream);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.6rem;
+}
+
+#volunteer-list li.role-item span {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .role-btn {
-  background-color: var(--teal);
+  flex-shrink: 0;
+  min-width: 140px;
+  text-align: center;
+  background-color: var(--coral-dark);
   color: var(--white);
   border: none;
-  border-radius: 999px;
-  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.85rem;
@@ -355,16 +373,29 @@ footer p {
 
 .role-btn:hover,
 .role-btn:focus {
-  background-color: var(--teal-dark);
+  background-color: var(--coral-darker);
 }
 
 .role-btn.is-saved {
-  background-color: var(--coral-dark);
+  background-color: var(--teal);
 }
 
 .role-btn.is-saved:hover,
 .role-btn.is-saved:focus {
-  background-color: var(--coral-darker);
+  background-color: var(--teal-dark);
+}
+
+@media (max-width: 420px) {
+  #volunteer-list li.role-item {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .role-btn {
+    width: 100%;
+    min-width: 0;
+  }
 }
 
 .saved-roles-box {
@@ -372,6 +403,7 @@ footer p {
   border: 1px dashed var(--teal);
   border-radius: 8px;
   padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
   margin-bottom: 1.25rem;
 }
 
@@ -386,7 +418,7 @@ footer p {
 }
 
 .saved-roles-box ul {
-  margin: 0.5rem 0 0 0;
+  margin: 0.75rem 0 0 0;
 }
 
 /* ---- Touchstone 4: Contact page interest banner ---- */
@@ -410,7 +442,7 @@ footer p {
 
 .interest-banner button {
   margin-top: 0.75rem;
-  background-color: var(--teal);
+  background-color: var(--coral-dark);
   color: var(--white);
   border: none;
   border-radius: 6px;
@@ -423,7 +455,7 @@ footer p {
 
 .interest-banner button:hover,
 .interest-banner button:focus {
-  background-color: var(--teal-dark);
+  background-color: var(--coral-darker);
 }
 
 /* ---- Touchstone 4: Form validation feedback ---- */
@@ -505,6 +537,10 @@ footer p {
     flex-basis: 100%;
   }
 
+  section[aria-labelledby="volunteer-heading"] .saved-roles-box {
+    flex-basis: 100%;
+  }
+
   section[aria-labelledby="volunteer-heading"] img {
     flex: 0 0 260px;
     margin: 0;
@@ -515,7 +551,7 @@ footer p {
     margin: 0;
   }
 
-  section[aria-labelledby="volunteer-heading"] ul {
+  section[aria-labelledby="volunteer-heading"] #volunteer-list {
     flex-basis: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
